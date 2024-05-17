@@ -12,22 +12,13 @@
 
 ## 使用方法
 
-這裡展示如何編譯和運行你的 C/C++ 程式：
+這裡展示如何運行C++ builder C/C++ 程式：
 
 1. 打開專案目錄：
-    ```bash
-    cd yourproject
-    ```
 
-2. 編譯程式：
-    ```bash
-    g++ -o helloworld helloworld.cpp
-    ```
+2. 下載.exe檔：
 
-3. 運行程式：
-    ```bash
-    ./helloworld
-    ```
+3. 雙擊以運行程式
 
 # 網頁設計實作
 <img src="images/sitj5-a2a4f.gif" alt="GIF" width="600">
