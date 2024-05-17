@@ -8,21 +8,6 @@
 - [使用方法](#使用方法)
 - [許可證](#許可證)
 
-## 安裝
-
-請按照以下步驟來安裝和配置本專案：
-
-1. 克隆倉庫到本地：
-    ```bash
-    git clone https://github.com/yourusername/yourproject.git
-    cd yourproject
-    ```
-
-2. 安裝所需的依賴（以 Visual Studio Code 為例）：
-    ```bash
-    code .
-    ```
-    在 Visual Studio Code 中，請確保已安裝 C/C++ 擴展。
 
 ## 使用方法
 
