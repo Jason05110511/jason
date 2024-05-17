@@ -1,0 +1,158 @@
+html {
+    font-family: 'Microsoft JhengHei';
+    text-align: center;
+    /*--------------------*/
+    background-image: url("./images/wood.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /*--------------------*/
+    margin: 0;
+    min-height: 950vh;
+    color: black;
+}
+
+.body {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.mush {
+    position: fixed;
+    height: 50px;
+    width: auto;
+    cursor: pointer;
+}
+
+.box {
+    /*border: 5px solid;*/
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 200px;
+    height: 450px;
+    width: 90%;
+    padding: 10px;
+
+    /*--------------------*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /*--------------------*/
+    /*
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    */
+    overflow: hidden;
+}
+
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    overflow: visible;
+    /*--------------------*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*padding: 20px;*/
+    /*--------------------*/ 
+    min-width: 50px;
+    max-width: 90%;
+    width: 130px;
+    height: 450px;
+    transition: width 1.5s ease .1s;
+    /*-----------------------------*/
+}
+.glass:hover {
+    width: 50%;
+}
+.glass:not(:hover) {
+    width: 50px; /* 设置其他非悬停元素的宽度 */
+}
+
+#inputContainer {
+    display: none;
+}
+
+.glass img{
+    width: 250px;
+    height: auto;
+}
+/*----------box rr ll -------------*/
+.box.rr{
+    position: fixed;
+    top:6%;
+    left: 3000px;
+    height: 50%;
+}
+.box.ll{
+    position: fixed;
+    top:6%;
+    left: -1600px;
+    height: 50%;
+    max-width: 100%;
+    transform: translateX(-1600px)
+}
+
+
+/*---------------btn------------------*/
+button {
+    padding-block: auto;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 0 5px #03e9f4;
+}
+
+.btn-anim-button {
+    background-color: #fbfbfbe8;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: dodgerblue;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin: 2px;
+    letter-spacing: 4px;
+}
+
+.btn-anim-button:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+}
+
+.btn-anim-button span {
+    position: absolute;
+    display: block;
+}
+
+/*-----------------------*/
+.pp {
+    color: aliceblue;
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+.glass:hover .pp {
+    /* display: block; */
+    opacity: 1;
+ }

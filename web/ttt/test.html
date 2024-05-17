@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .bb {
+            width: 50px;
+            height: 50px;
+            border-width: 2px;
+            border-style: solid;
+            border-color: blue;
+            animation: myAnimation 2s ease 0.5s infinite;
+        }
+
+        @keyframes myAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <title>Random Mushroom</title>
+</head>
+
+<body>
+    <div class="bb"></div>
+    <div style="color: blue;">
+        <!-- <img id="mushroom" src="/images/mushroom5.png" alt="Mushroom"> -->
+    </div>
+    <div class="bb" style="color: blue; height: 50px; width: 50px;">
+
+    </div>
+    <div style="border-width:3px;border-style:double;border-color:#FFAC55;padding:5px;">
+        測試邊框樣式
+    </div>
+    <script>
+        // 獲取動畫元素
+        var animatedElement = document.querySelector('.bb');
+
+        // 監聽動畫開始事件
+        animatedElement.addEventListener('animationstart', function () {
+            console.log('動畫開始了！');
+        });
+
+        // 監聽動畫結束事件
+        animatedElement.addEventListener('animationend', function () {
+            console.log('動畫結束了！');
+        });
+
+        // 監聽動畫迭代事件（當動畫從頭到尾完成一次迭代時觸發）
+        animatedElement.addEventListener('animationiteration', function () {
+            console.log('動畫迭代了！');
+        });
+
+    </script>
+    <script src="testscript.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            height: 200vh;
+            /* 用于演示滚动效果，使页面高度超过视窗 */
+        }
+
+        .seed {
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-image: url("pngegg1.png");
+            /* 替换为种子的图片路径 */
+            background-size: contain;
+        }
+
+        .grow {
+            animation: grow 3s ease-in-out;
+            /* 在下滑时成长 */
+        }
+
+        @keyframes grow {
+            0% {
+                background-image: url("pngegg1.png");
+                /* 第一个图片路径 */
+            }
+
+            50% {
+                background-image: url("pngegg2.png");
+                /* 第二个图片路径 */
+            }
+
+            100% {
+                background-image: url("pngegg3.png");
+                /* 回到第一个图片 */
+            }
+        }
+
+        .reverse {
+            animation: reverse-grow 3s ease-in-out;
+            /* 在上滑时时间倒退 */
+        }
+
+        @keyframes reverse-grow {
+            0% {
+                background-image: url("pngegg3.png");
+                /* 第一个图片路径 */
+            }
+
+            50% {
+                background-image: url("pngegg2.png");
+                /* 第二个图片路径 */
+            }
+
+            100% {
+                background-image: url("pngegg1.png");
+                /* 回到第一个图片 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="demo" class="seed"></div>
+
+    <script>
+        var seedElement = document.getElementById("demo");
+        var lastScrollTop = 0;
+
+        window.addEventListener("scroll", function () {
+            let st = window.pageYOffset || document.documentElement.scrollTop;
+            let scrollDelta = st - lastScrollTop;
+
+            if (scrollDelta > 0) {
+                // 下滑，添加成长类名
+                seedElement.classList.add("grow");
+                seedElement.classList.remove("reverse");
+            } else {
+                // 上滑，添加时间倒退类名
+                seedElement.classList.remove("grow");
+                seedElement.classList.add("reverse");
+            }
+
+            lastScrollTop = st;
+        });
+
+    </script>
+</body>
+
+</html>

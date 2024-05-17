@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滾動區塊</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 800vh;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            position: fixed;
+            top: 50%;
+            left: -5px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <div class="box">這是一個隨著滾動觸發的方塊</div>
+
+
+    <script>
+        var bb = document.querySelector('.box');
+        var c = getComputedStyle(bb);
+        const currentLeft = parseInt(c.left) || 0;
+        const aaa = parseInt(getComputedStyle(document.querySelector('.box')).left);
+        window.addEventListener('scroll', function () {
+            var box = document.querySelector('.box');
+            var scrollY = window.scrollY;
+
+            //var computedStyle = getComputedStyle(box);
+            //currentLeft = parseInt(computedStyle.left) || 0;
+
+            //console.log(currentLeft);
+            //console.log((scrollY * 0.5));
+            //console.log((currentLeft - (scrollY * 0.5)).toFixed(1));
+            
+            // 根据滚动的垂直位置动态更新 .box 的 left 属性
+            box.style.transform = 'translateX(' + (aaa + (scrollY * 0.5)) + 'px';
+        });
+
+        /*
+        window.addEventListener('scroll', function () {
+    var box = document.querySelector('.box');
+    var scrollY = window.scrollY;
+    console.log(box.style.left);
+    console.log(parseInt(box.style.left)-1);
+    // 根據滾動的垂直位置動態更新 .box 的 left 屬性
+    //box.style.left = (parseInt(box.style.left) - (scrollY * 0.5)) + 'px';
+});*/
+
+    </script>
+</body>
+
+</html>

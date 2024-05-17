@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll</title>
+  <style>
+    body {
+      background-image: url("/images/wood.jpg");
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      margin: 0;
+      height: 800vh;
+    }
+
+    .mush {
+      position: fixed;
+      height: 50px;
+      width: auto;
+      cursor: pointer; /* 讓滑鼠指標變為手型 */
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="demo"></div>
+
+  <script>
+    var a = 1;
+    var maxImages = 800; // 設置最多允許的圖片數量
+    var scrollDistance = 80; // 設置滾動距離的閾值
+
+    function getRndInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min;
+    }
+
+    function add() {
+      let tt = getRndInt(57, 93);
+      let rr = getRndInt(0, 95);
+
+      let demo = document.getElementById("demo");
+      let images = demo.querySelectorAll('.mush');
+
+      // 檢查當前圖片數量是否小於最大允許數量
+      if (images.length < maxImages) {
+        let newMushroom = document.createElement('img');
+        newMushroom.classList.add('mush');
+        newMushroom.src = "/images/mushroom5.png";
+        newMushroom.style.top = tt + '%';
+        newMushroom.style.right = rr + '%';
+
+        // 點擊事件
+        newMushroom.addEventListener('click', function () {
+          // 在點擊時執行爆炸效果
+          this.style.transition = 'transform 0.3s ease-in-out';
+          this.style.transform = 'scale(0)';
+
+          // 等待爆炸效果完成後移除元素
+          setTimeout(() => {
+            demo.removeChild(newMushroom);
+          }, 300);
+        });
+
+        demo.appendChild(newMushroom);
+      }
+    }
+
+    function remove() {
+      let demo = document.getElementById("demo");
+      let images = demo.querySelectorAll('.mush');
+
+      // 移除最晚添加的圖片
+      let lastImageIndex = images.length - 1;
+      if (lastImageIndex >= 0) {
+        demo.removeChild(images[lastImageIndex]);
+      }
+    }
+
+    let lastScrollTop = 0;
+    let scrolledDistance = 0;
+
+    window.addEventListener("scroll", function () {
+      let st = window.pageYOffset || document.documentElement.scrollTop;
+
+      // 計算滾動距離
+      let scrollDelta = st - lastScrollTop;
+      scrolledDistance += Math.abs(scrollDelta);
+
+      if (st === 0) {
+        remove();
+      }
+
+      // 判斷是否滾動超過閾值
+      if (scrolledDistance >= scrollDistance) {
+        // 重置滾動距離
+        scrolledDistance = 0;
+
+        // 判斷滾輪的滑動方向
+        if (scrollDelta > 0) {
+          // 下滑，新增圖片
+          add();
+        } else {
+          // 上滑，刪除圖片
+          remove();
+        }
+      }
+
+      lastScrollTop = st;
+    });
+
+  </script>
+</body>
+
+</html>
