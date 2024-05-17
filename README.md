@@ -28,9 +28,10 @@
     ./helloworld
     ```
 
-# My Project
+# 網頁設計實作
+<img src="images/sitj5-a2a4f.gif" alt="GIF" width="600">
 
-![GIF](https://github.com/js051/js051_implementation-program/blob/master/images/sitj5-a2a4f.gif)
+[Watch the video](videos/2024-05-17%2013-57-33.mkv)
 
 
 
