@@ -26,6 +26,9 @@
 3. 雙擊以運行程式
 
 # BMP圖檔加解密
+<img src="images/10yaf-jtp5e.gif" alt="GIF" width="600">
+
+[Watch the video](videos/2024-05-17 13-42-15.mkv)
 
 # 中序、後序、前序運算式轉換
 
