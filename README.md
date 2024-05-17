@@ -1,12 +1,11 @@
 # 專案名稱
 
-這是一個示範如何使用 C/C++ 進行開發的專案，旨在幫助新手快速上手。
+這是一個在學期間使用 C/C++ 進行開發的各種小程式，只要開啟各檔中的.exe檔即可直接運作。
 
 ## 目錄
 
-- [安裝](#安裝)
+- [目錄](#目錄)
 - [使用方法](#使用方法)
-- [貢獻](#貢獻)
 - [許可證](#許可證)
 
 ## 安裝
@@ -44,16 +43,7 @@
     ./helloworld
     ```
 
-## 貢獻
-
-歡迎任何人貢獻到本專案。請遵循以下步驟：
-
-1. Fork 本倉庫
-2. 創建一個 feature 分支 (`git checkout -b feature/AmazingFeature`)
-3. 提交您的更改 (`git commit -m 'Add some AmazingFeature'`)
-4. 推送到分支 (`git push origin feature/AmazingFeature`)
-5. 打開一個 Pull Request
 
 ## 許可證
 
-MIT © 2024 Your Name
+MIT © 2024 js051
