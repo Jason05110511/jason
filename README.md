@@ -10,7 +10,7 @@
 - [BMP圖檔加解密](#BMP圖檔加解密)
 - [中序、後序、前序運算式轉換](#中序、後序、前序運算式轉換)
 - [老鼠走迷宮](#老鼠走迷宮)
-- [排列+河內塔（遞迴）](#排列+河內塔（遞迴）)
+- [排列+河內塔（遞迴）](#排列河內塔遞迴)
 - [蘑菇查詢系統](#蘑菇查詢系統)
 - [網頁設計實作](#網頁設計實作)
 - [許可證](#許可證)
@@ -32,10 +32,20 @@
 [Watch the video](videos/2024-05-17%2016-27-52.mkv)
 
 # 中序、後序、前序運算式轉換
+<img src="images/4yff5-ni6hp.gif" alt="GIF" width="600">
+
+[Watch the video](videos/2024-05-17%2016-41-17.mkv)
 
 # 老鼠走迷宮
+<img src="images/d1g75-t7rur.gif" alt="GIF" width="600">
+
+[Watch the video](videos/2024-05-17%2016-50-22.mkv)
+
 
 # 排列+河內塔（遞迴）
+<img src="images/gcgce-ees13.gif" alt="GIF" width="600">
+
+[Watch the video](videos/gcgce-ees13.mp4)
 
 # 蘑菇查詢系統
 <img src="images/sr0dy-5ml78.gif" alt="GIF" width="600">
@@ -46,7 +56,6 @@
 <img src="images/sitj5-a2a4f.gif" alt="GIF" width="600">
 
 [Watch the video](videos/2024-05-17%2013-57-33.mkv)
-
 
 
 ## 許可證
