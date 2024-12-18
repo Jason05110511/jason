@@ -57,6 +57,8 @@
 
 [Watch the video](videos/2024-05-17%2013-57-33.mkv)
 
+# Blender動畫製作
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/YOUTUBE_VIDEO_ID_HERE/0.jpg)](https://youtu.be/-zJ57yJpa_Y)
 
 ## 許可證
 
